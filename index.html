@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VideoTranslatePro | AI-Powered Video Translation</title>
+    <meta name="description" content="Translate videos to 50+ languages with perfect lip-sync dubbing and professional subtitles">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome Icons -->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --dark: #121212;           /* Deep dark for text/headers */
+            --dark: #121212;           /* Deep dark for text */
             --light: #ffffff;          /* Pure white */
-            --primary: #4361ee;        /* Vibrant blue (primary action) */
-            --secondary: #3a0ca3;      /* Darker blue (hover states) */
-            --accent: #f72585;         /* Pink accent for highlights */
+            --primary: #4361ee;        /* Vibrant blue */
+            --secondary: #3a0ca3;      /* Darker blue */
+            --accent: #f72585;         /* Pink accent */
             --gray: #f8f9fa;           /* Light background */
             --border: #e9ecef;         /* Subtle borders */
         }
@@ -32,7 +33,7 @@
             line-height: 1.6;
         }
 
-        /* Header */
+        /* Header Styles */
         header {
             background: var(--light);
             box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
@@ -61,6 +62,7 @@
             display: flex;
             align-items: center;
             gap: 0.5rem;
+            text-decoration: none;
         }
 
         .logo i {
@@ -107,6 +109,8 @@
             border-radius: 50px;
             font-weight: 600;
             transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
         }
 
         .cta-button:hover {
@@ -369,15 +373,11 @@
             font-size: 0.9rem;
         }
 
-        /* Responsive Adjustments */
+        /* Responsive */
         @media (max-width: 768px) {
             .header-content {
                 flex-direction: column;
                 gap: 1.5rem;
-            }
-
-            nav ul {
-                gap: 1.2rem;
             }
 
             .hero h1 {
@@ -400,10 +400,10 @@
     <header>
         <div class="container">
             <div class="header-content">
-                <div class="logo">
+                <a href="index.html" class="logo">
                     <i class="fas fa-closed-captioning"></i>
                     <span>VideoTranslatePro</span>
-                </div>
+                </a>
                 <nav>
                     <ul>
                         <li><a href="#features">Features</a></li>
@@ -412,7 +412,7 @@
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
-                <a href="translator.html" class="cta-button">Try Now</a>
+                <a href="video-translation.html" class="cta-button">Try Now</a>
             </div>
         </div>
     </header>
@@ -423,11 +423,11 @@
             <h1>Break Language Barriers with AI-Powered Video Translation</h1>
             <p>Instantly translate your videos into 50+ languages with perfect lip-sync dubbing and professional subtitles. Reach a global audience effortlessly.</p>
             <div class="hero-buttons">
-                <a href="translator.html" class="cta-button">Start Translating Free</a>
+                <a href="video-translation.html" class="cta-button">Start Translating Free</a>
                 <a href="#how-it-works" class="cta-button secondary-button">See How It Works</a>
             </div>
             <div class="hero-image">
-                <img src="https://via.placeholder.com/1200x600/f6f7ff/4361ee?text=VideoTranslatePro+Dashboard" alt="Video Translation Interface">
+                <img src="images/dashboard-preview.jpg" alt="Video Translation Interface">
             </div>
         </div>
     </section>
@@ -518,7 +518,7 @@
         <div class="container">
             <h2>Ready to Go Global?</h2>
             <p>Join thousands of creators, educators, and businesses expanding their reach with perfect translations.</p>
-            <a href="translator.html" class="cta-button white">Start Free Trial</a>
+            <a href="video-translation.html" class="cta-button white">Start Free Trial</a>
         </div>
     </section>
 
@@ -530,17 +530,17 @@
                     <h3>VideoTranslatePro</h3>
                     <p>Making global communication seamless through AI-powered video translation technology.</p>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+                        <a href="https://facebook.com"><i class="fab fa-facebook"></i></a>
+                        <a href="https://linkedin.com"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://youtube.com"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
                 <div class="footer-column">
                     <h3>Product</h3>
                     <ul class="footer-links">
-                        <li><a href="translator.html">Translation Tool</a></li>
-                        <li><a href="#">Features</a></li>
+                        <li><a href="video-translation.html">Translation Tool</a></li>
+                        <li><a href="#features">Features</a></li>
                         <li><a href="#pricing">Pricing</a></li>
                         <li><a href="#">API</a></li>
                     </ul>
@@ -559,7 +559,7 @@
                     <ul class="footer-links">
                         <li><a href="#">About Us</a></li>
                         <li><a href="#">Careers</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#contact">Contact</a></li>
                         <li><a href="#">Legal</a></li>
                     </ul>
                 </div>

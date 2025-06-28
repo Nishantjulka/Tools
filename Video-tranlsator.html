@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VideoTranslatePro | Premium Translation Tool</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --dark-bg: #1a1a1a;         /* Soft black */
+            --light-bg: #ffffff;        /* Pure white */
+            --accent-color: #0066ff;     /* Electric blue */
+            --subtle-gray: #f9f9f9;     /* Card backgrounds */
+            --border-gray: #e0e0e0;     /* Light borders */
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--dark-bg);
+            background: var(--light-bg);
+            line-height: 1.6;
+        }
+        
+        /* Header */
+        header {
+            background: var(--dark-bg);
+            color: white;
+            padding: 1.5rem 2rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+        
+        nav ul {
+            display: flex;
+            gap: 1.5rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+        
+        nav a:hover {
+            opacity: 0.8;
+        }
+        
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 4rem 0;
+        }
+        
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            color: #666;
+        }
+        
+        /* Tool Container */
+        .tool-container {
+            background: var(--subtle-gray);
+            border-radius: 12px;
+            padding: 2.5rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            margin-bottom: 3rem;
+        }
+        
+        /* Buttons */
+        button {
+            background: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.8rem;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        button:hover {
+            background: #0052cc;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 102, 255, 0.2);
+        }
+        
+        /* Inputs */
+        input, select, textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid var(--border-gray);
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+        
+        input:focus, select:focus, textarea:focus {
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 3px rgba(0, 102, 255, 0.1);
+            outline: none;
+        }
+        
+        /* Video Preview */
+        .video-preview {
+            width: 100%;
+            background: #000;
+            aspect-ratio: 16/9;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            overflow: hidden;
+        }
+        
+        /* Progress Bar */
+        .progress-container {
+            width: 100%;
+            background: #eee;
+            border-radius: 4px;
+            margin: 1.5rem 0;
+            overflow: hidden;
+            display: none;
+        }
+        
+        .progress-bar {
+            height: 6px;
+            background: linear-gradient(90deg, var(--accent-color), #00b894);
+            width: 0%;
+            transition: width 0.4s;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark-bg);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin: 1.5rem 0;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+        
+        .footer-links a:hover {
+            opacity: 0.8;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .tool-container {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">VideoTranslatePro</div>
+            <nav>
+                <ul>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="container">
+        <section class="hero">
+            <h1>Translate Videos & Audio Like a Pro</h1>
+            <p>Instantly convert your content into 50+ languages with studio-quality dubbing and subtitles.</p>
+        </section>
+        
+        <section class="tool-container">
+            <h2>Upload Your File</h2>
+            <form id="translationForm">
+                <div class="form-group">
+                    <input type="file" id="mediaSource" accept="video/*, audio/*" style="display: none;">
+                    <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
+                        <button type="button" onclick="document.getElementById('mediaSource').click()">Choose File</button>
+                        <input type="text" id="mediaUrl" placeholder="Or paste a YouTube/Vimeo link">
+                    </div>
+                </div>
+                
+                <div class="video-preview" id="videoPreview">
+                    <p>Your video will appear here</p>
+                </div>
+                
+                <div class="progress-container" id="progressContainer">
+                    <div class="progress-bar" id="progressBar"></div>
+                </div>
+                
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+                    <button type="button" id="previewBtn">Preview</button>
+                    <button type="submit" id="translateBtn">Translate Now</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <div class="logo">VideoTranslatePro</div>
+            <div class="footer-links">
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">Contact</a>
+            </div>
+            <p>&copy; 2023 VideoTranslatePro. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Simple animation for buttons
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('mouseenter', () => {
+                button.style.transform = 'translateY(-2px)';
+            });
+            button.addEventListener('mouseleave', () => {
+                button.style.transform = 'translateY(0)';
+            });
+        });
+        
+        // File upload preview
+        document.getElementById('mediaSource').addEventListener('change', function(e) {
+            if (e.target.files.length > 0) {
+                const file = e.target.files[0];
+                const videoPreview = document.getElementById('videoPreview');
+                videoPreview.innerHTML = `
+                    <video controls src="${URL.createObjectURL(file)}" style="width:100%;height:100%;"></video>
+                `;
+            }
+        });
+    </script>
+</body>
+</html>
